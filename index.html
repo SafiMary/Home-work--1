@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num=+prompt('Введите число:');
+        if(num%2==0 && num >=1 && num <= 10)
+        console.log(true);  
+        else
+        console.log(false);  
+    </script>
+    <script>
+        var num1=+prompt('Введите первое число:');
+        var num2=+prompt('Введите второе число:');
+        for(var i= num1;i < num2;i++){
+        if (i %2%2===0)
+        console.log(i);
+        }
+    </script>
+
+    <script>
+function sumInput() {
+
+let numbers = [];
+const con = confirm("Хотите ввести  число?");
+while (con==true) {
+  let value = prompt("Введите число", 0);
+  if (value === "" ||con== false|| value === null || !isFinite(value)) break;
+  numbers.push(+value);
+}
+let sum = 0;
+for (let number of numbers) {
+  sum += number;
+}
+return sum;
+}
+alert( sumInput() );
+    </script>
+    
+
+    <script>
+        const line=String(prompt('Введите строку:'));
+        const result = line.replace(/[1]/gi, '').replace(/\s/gi, '');
+        alert(` ${String(result)}`);
+
+    </script>
+    <script>
+  
+   
+        function random(){
+    var arr = [];     
+    for(var i = 1; i < 10; ++i) 
+    arr.push(Math.floor(Math.random() * 20) + 1);
+    const arr2=  arr.filter(n => n %3===0)
+    return arr2;
+
+} 
+alert(random());
+    </script>
+</body>
+</html>
